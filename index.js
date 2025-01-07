@@ -38,6 +38,8 @@ console.log(`The odd numbers you gave are ${getOdds(numbers)}.`);
  */
 function getLength(numbers) {
   // TODO
+  let numLength = numbers.length;
+  return numLength;
 }
 
 /**
@@ -46,6 +48,11 @@ function getLength(numbers) {
  */
 function getSum(numbers) {
   // TODO
+  sum = 0;
+  for (i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 }
 
 /**
@@ -54,6 +61,11 @@ function getSum(numbers) {
  */
 function getMean(numbers) {
   // TODO
+  let sum;
+  let length;
+  sum = getSum(numbers);
+  length = getLength(numbers);
+  return sum / length;
 }
 
 /**
@@ -62,6 +74,15 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
+  //in this case I know that the array is in decending order. Therefore I can simple return the first number in the list.
+  // However,
+  let min = numbers[0];
+  for (i = 1; i < numbers.length; i++) {
+    if (numbers[i] < min) {
+      min = numbers[i];
+    }
+    return min;
+  }
 }
 
 /**
@@ -70,6 +91,13 @@ function getMin(numbers) {
  */
 function getMax(numbers) {
   // TODO
+  let max = numbers[4];
+  for (i = 1; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+      min = numbers[i];
+    }
+    return max;
+  }
 }
 
 /**
@@ -78,6 +106,7 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+
 }
 
 /**
@@ -86,6 +115,7 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
+  let evens = numbers[]
 }
 
 /**
