@@ -106,6 +106,7 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
+  
 
 }
 
