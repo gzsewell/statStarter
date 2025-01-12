@@ -74,8 +74,6 @@ function getMean(numbers) {
  */
 function getMin(numbers) {
   // TODO
-  //in this case I know that the array is in decending order. Therefore I can simple return the first number in the list.
-  // However,
   let min = numbers[0];
   for (i = 1; i < numbers.length; i++) {
     if (numbers[i] < min) {
@@ -106,8 +104,10 @@ function getMax(numbers) {
  */
 function getRange(numbers) {
   // TODO
-  
-
+  let num1 = Math.min(...numbers);
+  let num2 = Math.max(...numbers);
+  let num3 = `${num1} - ${num2}`;
+  return num3;
 }
 
 /**
@@ -116,7 +116,14 @@ function getRange(numbers) {
  */
 function getEvens(numbers) {
   // TODO
-  let evens = numbers[]
+  //if the number in the array divide by 2 with no remainder, the number is even.
+  //if the number has a remainder, the number is odd.
+  //loop throught he array to check if the numbers divide by 2 with 0 remainder.
+  let evens = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) evens.push(numbers[i]);
+  }
+  return evens;
 }
 
 /**
@@ -125,4 +132,11 @@ function getEvens(numbers) {
  */
 function getOdds(numbers) {
   // TODO
+  let evens = [];
+  let odds = [];
+  for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 == 0) evens.push(numbers[i]);
+    else if (numbers[i] % 2 != 0) odds.push(numbers[i]);
+  }
+  return odds;
 }
